@@ -1,0 +1,28 @@
+{
+  "name": "lizard-lizard-lizard",
+  "version": "1.0.0",
+  "description": "The ADHD Clicker Game - Click the lizard with ADHD!",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "clicker",
+    "game",
+    "lizard",
+    "adhd",
+    "idle",
+    "incremental"
+  ],
+  "author": "Lizard Game Studio",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0"
+  }
+}

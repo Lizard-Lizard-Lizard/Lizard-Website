@@ -1,0 +1,837 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Parallax Background */
+.parallax-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url('background.png');
+    background-repeat: repeat;
+    background-size: 75px 36px;
+    animation: parallax-scroll 30s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes parallax-scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-300px, -300px);
+    }
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.game-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lizard-emoji {
+    font-size: 4rem;
+    animation: bounce 2s infinite;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+
+/* Game Showcase */
+.game-showcase {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.lizard-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-details {
+    text-align: left;
+}
+
+.game-title-main {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.game-tagline {
+    font-size: 1.2rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.game-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+/* Lizard Container */
+.lizard-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    min-height: 300px;
+}
+
+.lizard {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.lizard:hover {
+    transform: scale(1.05);
+}
+
+.lizard:active {
+    transform: scale(0.95);
+}
+
+.lizard-body {
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: lizardIdle 3s ease-in-out infinite;
+}
+
+.lizard-head {
+    width: 60px;
+    height: 50px;
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    border-radius: 25px;
+    position: absolute;
+    top: -25px;
+    left: -10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lizard-eyes {
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+
+.eye {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    animation: eyeBlink 4s infinite;
+}
+
+.left-eye {
+    left: 5px;
+}
+
+.right-eye {
+    left: 25px;
+}
+
+.lizard-tongue {
+    width: 4px;
+    height: 20px;
+    background: #ff6b6b;
+    position: absolute;
+    bottom: -15px;
+    left: 28px;
+    border-radius: 2px;
+    animation: tongueFlick 2s infinite;
+}
+
+.lizard-legs {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+}
+
+.leg {
+    width: 6px;
+    height: 15px;
+    background: #22c55e;
+    position: absolute;
+    border-radius: 3px;
+    animation: legWiggle 1.5s ease-in-out infinite;
+}
+
+.front-left { left: 15px; animation-delay: 0s; }
+.front-right { left: 35px; animation-delay: 0.2s; }
+.back-left { right: 35px; animation-delay: 0.4s; }
+.back-right { right: 15px; animation-delay: 0.6s; }
+
+/* Click Effect */
+.click-effect {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.click-effect::before {
+    content: '+1';
+    position: absolute;
+    color: #fbbf24;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: clickFloat 0.8s ease-out forwards;
+}
+
+/* Key Features */
+.key-features {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.features-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.special-feature {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+.tba-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Discord Community */
+.discord-community {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.discord-community:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(88, 101, 242, 0.2);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.community-card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.discord-logo {
+    font-size: 4rem;
+    color: #5865f2;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.discord-community:hover .discord-logo {
+    transform: scale(1.1) rotate(5deg);
+    color: #7289da;
+    text-shadow: 0 0 20px rgba(88, 101, 242, 0.5);
+}
+
+.community-card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.community-status {
+    font-size: 1.2rem;
+    color: #10b981;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.community-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+.community-actions {
+    margin-top: 20px;
+}
+
+.discord-btn {
+    background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discord-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Steam Release */
+.steam-release {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.steam-release:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(23, 26, 33, 0.2);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.release-card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.steam-logo {
+    font-size: 4rem;
+    color: #171a21;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.steam-release:hover .steam-logo {
+    transform: scale(1.1) rotate(-5deg);
+    color: #2a475e;
+    text-shadow: 0 0 20px rgba(23, 26, 33, 0.5);
+}
+
+.release-card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.release-status {
+    font-size: 1.2rem;
+    color: #f59e0b;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.release-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+.release-actions {
+    margin-top: 20px;
+}
+
+.wishlist-btn {
+    background: linear-gradient(135deg, #171a21 0%, #2a475e 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wishlist-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wishlist-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+
+/* Community Section */
+.community-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.community-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 15px;
+}
+
+.community-section p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+.social-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon {
+    font-size: 3rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.discord-box .social-icon {
+    color: #7289da;
+}
+
+.steam-box .social-icon {
+    color: #171a21;
+}
+
+.social-content {
+    flex: 1;
+    text-align: left;
+}
+
+.social-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.social-content p {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.discord-btn {
+    background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+}
+
+.steam-btn {
+    background: linear-gradient(135deg, #171a21 0%, #2a475e 100%);
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn i {
+    font-size: 1.1rem;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateX(400px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    font-weight: 500;
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes lizardIdle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes eyeBlink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+@keyframes tongueFlick {
+    0%, 80%, 100% { transform: scaleY(1); }
+    90% { transform: scaleY(1.5); }
+}
+
+@keyframes legWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes clickFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+/* ADHD Animation for Lizard */
+.lizard.adhd {
+    animation: adhdWiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes adhdWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-title {
+        font-size: 2.5rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .lizard-emoji {
+        font-size: 3rem;
+    }
+    
+    .game-showcase {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .specials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lizard-body {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .lizard-head {
+        width: 50px;
+        height: 40px;
+        top: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .game-title {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .game-container {
+        padding: 15px;
+    }
+    
+    .lizard-body {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .lizard-head {
+        width: 40px;
+        height: 35px;
+        top: -18px;
+    }
+}
