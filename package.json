@@ -1,7 +1,7 @@
 {
   "name": "lizard-lizard-lizard",
   "version": "1.0.0",
-  "description": "The ADHD Clicker Game - Click the lizard with ADHD!",
+  "description": "The ADHD Clicker Game - An addictive browser-based clicker game featuring a hyperactive lizard with unpredictable reactions. Experience chaotic gameplay with random events, color explosions, and progressive upgrades. Perfect for casual gamers who love incremental games and idle gameplay mechanics.",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
@@ -15,10 +15,32 @@
     "lizard",
     "adhd",
     "idle",
-    "incremental"
+    "incremental",
+    "browser-game",
+    "casual-game",
+    "addictive-game",
+    "steam-game",
+    "discord-community",
+    "progressive-upgrades",
+    "achievement-system",
+    "random-events",
+    "color-explosions",
+    "chaotic-gameplay",
+    "web-game",
+    "html5-game",
+    "javascript-game",
+    "free-game"
   ],
   "author": "Lizard Game Studio",
   "license": "MIT",
+  "homepage": "https://lizardlizardlizard.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lizardgamestudio/lizard-lizard-lizard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lizardgamestudio/lizard-lizard-lizard/issues"
+  },
   "devDependencies": {
     "vite": "^5.0.0"
   },

@@ -3,10 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizard Lizard Lizard - The ADHD Clicker Game</title>
-    <meta name="description" content="Click the lizard with ADHD in this addictive clicker game! Join our Discord and get it on Steam.">
+    
+    <!-- Primary Meta Tags -->
+    <title>Lizard Lizard Lizard - The ADHD Clicker Game | Click the Hyperactive Lizard!</title>
+    <meta name="title" content="Lizard Lizard Lizard - The ADHD Clicker Game | Click the Hyperactive Lizard!">
+    <meta name="description" content="Click the lizard with ADHD in this addictive clicker game!">
+    <meta name="keywords" content="clicker game, idle game, incremental game, lizard game, ADHD game, browser game, steam game, discord community, casual game, addictive game">
+    <meta name="author" content="Dennis Heinrich">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lizards.dev/">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon.png">
+    <meta name="theme-color" content="#4CAF50">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lizards.dev/">
+    <meta property="og:title" content="Lizard Lizard Lizard - The ADHD Clicker Game">
+    <meta property="og:description" content="Click the lizard with ADHD in this addictive clicker game! Experience chaotic gameplay with random reactions, color explosions, and progressive upgrades.">
+    <meta property="og:image" content="https://lizards.dev/assets/icon.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Lizard Lizard Lizard">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lizards.dev/">
+    <meta property="twitter:title" content="Lizard Lizard Lizard - The ADHD Clicker Game">
+    <meta property="twitter:description" content="Click the lizard with ADHD in this addictive clicker game! Experience chaotic gameplay with random reactions, color explosions, and progressive upgrades.">
+    <meta property="twitter:image" content="https://lizards.dev/assets/icon.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="Lizard Lizard Lizard">
+    <meta name="msapplication-TileColor" content="#4CAF50">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/fontawesome.min.css">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Lizard Lizard Lizard",
+        "alternateName": "The ADHD Clicker Game",
+        "description": "An addictive clicker game featuring a lizard with ADHD that reacts with random energy bursts, color changes, and chaotic movements. Click the lizard and watch as it becomes more hyperactive with each interaction.",
+        "url": "https://lizards.dev",
+        "image": "https://lizards.dev/assets/icon.png",
+        "genre": ["Clicker Game", "Idle Game", "Incremental Game", "Casual Game"],
+        "gamePlatform": ["Web Browser", "Steam"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Lizard Game Studio"
+        },
+        "featureList": [
+            "ADHD Lizard protagonist",
+            "Chaotic gameplay mechanics",
+            "Progressive upgrade system",
+            "Achievement system",
+            "Random events and animations",
+            "Steam Community Market integration",
+            "Weekly events"
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Lizard Game Studio",
+        "url": "https://lizards.dev",
+        "logo": "https://lizards.dev/assets/icon.png",
+        "sameAs": [
+            "https://discord.gg/lizardlizardlizard"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Parallax Background -->
@@ -15,20 +108,20 @@
     </div>
     
     <div class="container">
-        <header class="header">
+        <header class="header" role="banner">
             <div class="header-content">
                 <h1 class="game-title">
-                    <span class="lizard-emoji">🦎</span>
+                    <img src="assets/icon.png" alt="Lizard Lizard Lizard Game Icon" class="lizard-icon">
                     Lizard Lizard Lizard
                 </h1>
                 <p class="tagline">The ADHD Clicker Game</p>
             </div>
         </header>
-        <main class="main-content">
+        <main class="main-content" role="main">
             <div class="content-container">
                 <div class="game-showcase">
                     <div class="lizard-hero">
-                        <div class="lizard">
+                        <div class="lizard" role="img" aria-label="Animated lizard character with ADHD">
                             <div class="lizard-body">
                                 <div class="lizard-head">
                                     <div class="lizard-eyes">
@@ -63,97 +156,102 @@
                 </div>
 
                 <!-- Key Features -->
-                <div class="key-features">
-                    <h3 class="features-title">What Makes This Game Special?</h3>
+                <section class="key-features" aria-labelledby="features-title">
+                    <h3 id="features-title" class="features-title">What Makes This Game Special?</h3>
                     <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">🦎</div>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">🦎</div>
                             <h4>ADHD Lizard</h4>
                             <p>Our protagonist has the attention span of a goldfish on caffeine. Every click triggers unpredictable reactions!</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">⚡</div>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">⚡</div>
                             <h4>Chaotic Gameplay</h4>
                             <p>Random events, color explosions, and surprise animations keep you on your toes!</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">🎯</div>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">🎯</div>
                             <h4>Progressive Upgrades</h4>
                             <p>Unlock auto-clickers, lizard food, and even ADHD medication to manage the chaos!</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">🏆</div>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">🏆</div>
                             <h4>Achievement System</h4>
                             <p>Earn badges for your clicking prowess and lizard management skills!</p>
-                        </div>
-                        <div class="feature-card special-feature">
-                            <div class="feature-icon">
+                        </article>
+                        <article class="feature-card special-feature">
+                            <div class="feature-icon" aria-hidden="true">
                                 <i class="fas fa-store"></i>
                             </div>
                             <h4>Steam Community Market Items (TBA)</h4>
                             <p>Exclusive drops and collectible items available in the Steam Community Market.</p>
                             <div class="tba-badge">Coming Soon</div>
-                        </div>
-                        <div class="feature-card special-feature">
-                            <div class="feature-icon">
+                        </article>
+                        <article class="feature-card special-feature">
+                            <div class="feature-icon" aria-hidden="true">
                                 <i class="fas fa-calendar-week"></i>
                             </div>
                             <h4>Weekly Events (TBA)</h4>
                             <p>Participate in special weekly events with unique challenges. New events every week!</p>
                             <div class="tba-badge">Coming Soon</div>
-                        </div>
+                        </article>
                     </div>
-                </div>
+                </section>
 
                 <!-- Discord Community -->
-                <div class="discord-community">
+                <section class="discord-community" aria-labelledby="discord-title">
                     <div class="community-card">
-                        <div class="discord-logo">
+                        <div class="discord-logo" aria-hidden="true">
                             <i class="fab fa-discord"></i>
                         </div>
-                        <h3>Join Our Discord</h3>
+                        <h3 id="discord-title">Join Our Discord</h3>
                         <p class="community-status">Active Community</p>
                         <p class="community-description">
                             Connect with fellow lizard enthusiasts! Get exclusive updates, share strategies, 
                             and be part of our growing community of ADHD lizard lovers.
                         </p>
                         <div class="community-actions">
-                            <button class="discord-btn" id="discordBtn">
-                                <i class="fab fa-discord"></i>
+                            <button class="discord-btn" id="discordBtn" aria-label="Join our Discord server">
+                                <i class="fab fa-discord" aria-hidden="true"></i>
                                 Join Discord Server
                             </button>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Steam Release Info -->
-                <div class="steam-release">
+                <section class="steam-release" aria-labelledby="steam-title">
                     <div class="release-card">
-                        <div class="steam-logo">
+                        <div class="steam-logo" aria-hidden="true">
                             <i class="fab fa-steam"></i>
                         </div>
-                        <h3>Coming to Steam</h3>
+                        <h3 id="steam-title">Coming to Steam</h3>
                         <p class="release-status">Currently in Development</p>
                         <p class="release-description">
                             We're working hard to bring you the most entertaining ADHD lizard experience possible. 
                             Follow our development progress and be the first to know when it launches!
                         </p>
                         <div class="release-actions">
-                            <button class="wishlist-btn" id="wishlistBtn">
-                                <i class="fas fa-heart"></i>
+                            <button class="wishlist-btn" id="wishlistBtn" aria-label="Add Lizard Lizard Lizard to Steam wishlist">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
                                 Add to Wishlist (Coming Soon)
                             </button>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
 
-
+        <!-- Footer with additional SEO content -->
+        <footer class="footer" role="contentinfo">
+            <p><a href="https://dennis-heinri.ch/kontakt">Imprint</a></p>
+            <p><a href="https://dennis-heinri.ch/kontakt/datenschutz">Privacy Policy</a></p>
+            <p><a href="https://discord.lizards.dev">Support</a></p>
+        </footer>
     </div>
 
     <!-- Notification System -->
-    <div id="notification" class="notification"></div>
+    <div id="notification" class="notification" role="alert" aria-live="polite"></div>
 
     <script src="assets/script.js"></script>
 </body>
