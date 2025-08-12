@@ -18,6 +18,7 @@
     <link rel="canonical" href="https://lizards.dev/">
     
     <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="apple-touch-icon" href="assets/icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon.png">
@@ -74,7 +75,7 @@
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Lizard Game Studio"
+            "name": "Dennis Heinrich"
         },
         "featureList": [
             "ADHD Lizard protagonist",
@@ -92,11 +93,11 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Lizard Game Studio",
+        "name": "Dennis Heinrich",
         "url": "https://lizards.dev",
         "logo": "https://lizards.dev/assets/icon.png",
         "sameAs": [
-            "https://discord.gg/lizardlizardlizard"
+            "https://discord.lizards.dev"
         ]
     }
     </script>
@@ -244,10 +245,156 @@
 
         <!-- Footer with additional SEO content -->
         <footer class="footer" role="contentinfo">
-            <p><a href="https://dennis-heinri.ch/kontakt">Imprint</a></p>
-            <p><a href="https://dennis-heinri.ch/kontakt/datenschutz">Privacy Policy</a></p>
+            <p><a href="#" id="imprintBtn">Imprint</a></p>
+            <p><a href="#" id="privacyBtn">Privacy Policy</a></p>
             <p><a href="https://discord.lizards.dev">Support</a></p>
         </footer>
+    </div>
+
+    <!-- Imprint Modal -->
+    <div id="imprintModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Imprint</h3>
+                <button class="modal-close" id="closeImprintModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="imprint-info">
+                    <h4>Contact Information</h4>
+                    <p>
+                        <strong>Dennis Heinrich</strong><br>
+                        Schuhstraße 36<br>
+                        29525 Uelzen (Germany)<br>
+                        <strong>E-Mail:</strong> <a href="mailto:dennis@lizards.dev">dennis@lizards.dev</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Privacy Policy</h3>
+                <button class="modal-close" id="closePrivacyModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="privacy-info">
+                    <p><strong>Dennis Heinrich</strong><br>
+                    Schuhstraße 36<br>
+                    29525 Uelzen, Germany<br>
+                    <strong>E-Mail:</strong> <a href="mailto:dennis@lizards.dev">dennis@lizards.dev</a></p>
+
+                    <p>The protection of your personal data is of particular concern to us. We process your data exclusively on the basis of legal provisions (GDPR, TKG 2003). This privacy policy informs you about the most important aspects of data processing within the scope of our website "Lizard Lizard Lizard - The ADHD Clicker Game".</p>
+
+                    <h4>Data Controller</h4>
+                    <p>The person responsible for data processing is Dennis Heinrich, located at Schuhstraße 36, 29525 Uelzen, Germany. You can reach us by email at dennis@lizards.dev.</p>
+
+                    <h4>Data Security</h4>
+                    <p>We take appropriate precautions to protect your personal data in accordance with Article 32 of the GDPR. These particularly concern protection against unauthorized, unlawful, or accidental access, processing, loss, use, and manipulation.</p>
+
+                    <h4>Website Data Collection</h4>
+                    <h5>Personal Data, Purpose of Data Processing, and Legal Basis</h5>
+                    <p>Personal data is information that can be clearly assigned to a person. When you visit our website, technical data is automatically collected for operational purposes (IP address, session start and end, date and time of request, accessed pages, browser type and version, operating system, referrer URL). This technical information may be personal data in individual cases. We use this technical information only when necessary for the operation and protection of our website against attacks and misuse, as well as pseudonymized or anonymized for statistical purposes.</p>
+
+                    <h4>Game-Specific Data Processing</h4>
+                    <p>Our website features an interactive clicker game. The following data processing occurs:</p>
+                    <ul>
+                        <li><strong>Game Interactions:</strong> Click events and game interactions are processed locally in your browser and are not transmitted to our servers</li>
+                        <li><strong>Local Storage:</strong> Game progress and settings may be stored locally in your browser's local storage</li>
+                        <li><strong>No User Accounts:</strong> We do not require user registration or account creation</li>
+                        <li><strong>No Personal Game Data:</strong> We do not collect or store personal gaming data</li>
+                    </ul>
+
+                    <h4>Third-Party Services</h4>
+                    <p>Our website uses the following third-party services:</p>
+                    <ul>
+                        <li><strong>Discord Integration:</strong> Links to our Discord server (discord.lizards.dev) - Discord's privacy policy applies when you visit their platform</li>
+                        <li><strong>Steam Integration:</strong> Future integration with Steam platform - Steam's privacy policy will apply</li>
+                        <li><strong>Font Awesome:</strong> Icons are served locally from our servers, no external requests</li>
+                        <li><strong>Local Fonts:</strong> All fonts (Inter) are served locally, no Google Fonts requests</li>
+                    </ul>
+
+                    <h4>Cookies and Local Storage</h4>
+                    <p>Our website uses:</p>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Minimal cookies required for website functionality</li>
+                        <li><strong>Local Storage:</strong> Game progress and preferences stored locally in your browser</li>
+                        <li><strong>No Tracking Cookies:</strong> We do not use analytics or tracking cookies</li>
+                        <li><strong>No Advertising Cookies:</strong> We do not serve advertisements or use advertising cookies</li>
+                    </ul>
+
+                    <p>You can prevent the use of cookies by changing your browser settings. Disabling cookies may affect website functionality.</p>
+
+                    <h4>Data Processing Purposes</h4>
+                    <p>We process your data for the following purposes:</p>
+                    <ul>
+                        <li>Providing and maintaining the website functionality</li>
+                        <li>Ensuring website security and preventing abuse</li>
+                        <li>Responding to user inquiries and support requests</li>
+                        <li>Improving website performance and user experience</li>
+                        <li>Legal compliance and regulatory requirements</li>
+                    </ul>
+
+                    <h4>Legal Basis for Data Processing</h4>
+                    <p>The legal bases for data processing are:</p>
+                    <ul>
+                        <li>Legitimate interest (Art. 6 para 1 lit f GDPR) - for website operation and security</li>
+                        <li>Consent (Art. 6 para 1 lit a GDPR) - for any optional data processing</li>
+                        <li>Contract fulfillment (Art. 6 para 1 lit b GDPR) - for responding to inquiries</li>
+                    </ul>
+
+                    <h4>Data Retention</h4>
+                    <p>We retain your data only as long as necessary:</p>
+                    <ul>
+                        <li><strong>Technical Logs:</strong> Server logs are retained for 30 days for security purposes</li>
+                        <li><strong>Contact Inquiries:</strong> Email inquiries are retained for 6 months</li>
+                        <li><strong>Local Game Data:</strong> Stored locally in your browser, you can clear this anytime</li>
+                        <li><strong>Legal Requirements:</strong> Data may be retained longer if required by law</li>
+                    </ul>
+
+                    <h4>Data Sharing</h4>
+                    <p>We do not sell, trade, or otherwise transfer your personal data to third parties, except:</p>
+                    <ul>
+                        <li>When required by law or legal process</li>
+                        <li>To protect our rights, property, or safety</li>
+                        <li>With your explicit consent</li>
+                        <li>To service providers who assist in website operation (under strict data protection agreements)</li>
+                    </ul>
+
+                    <h4>Your Rights</h4>
+                    <p>Under GDPR, you have the following rights:</p>
+                    <ul>
+                        <li><strong>Right to Information:</strong> Request information about your personal data</li>
+                        <li><strong>Right to Correction:</strong> Request correction of inaccurate data</li>
+                        <li><strong>Right to Deletion:</strong> Request deletion of your personal data</li>
+                        <li><strong>Right to Restriction:</strong> Request restriction of data processing</li>
+                        <li><strong>Right to Data Portability:</strong> Request your data in a structured format</li>
+                        <li><strong>Right to Object:</strong> Object to data processing based on legitimate interests</li>
+                        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
+                    </ul>
+
+                    <h4>Children's Privacy</h4>
+                    <p>Our website is not specifically targeted at children under 13. We do not knowingly collect personal data from children under 13. If you are a parent and believe your child has provided us with personal data, please contact us immediately.</p>
+
+                    <h4>International Data Transfers</h4>
+                    <p>Our website is hosted in the European Union. If you access our website from outside the EU, please be aware that your data may be transferred to and processed in the EU, where data protection laws may differ from those in your country.</p>
+
+                    <h4>Changes to This Privacy Policy</h4>
+                    <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date.</p>
+
+                    <h4>Contact Information</h4>
+                    <p>If you have any questions about this privacy policy or our data practices, please contact us:</p>
+                    <p><strong>Email:</strong> <a href="mailto:dennis@lizards.dev">dennis@lizards.dev</a><br>
+                    <strong>Address:</strong> Dennis Heinrich, Schuhstraße 36, 29525 Uelzen, Germany</p>
+
+                    <p>If you believe that the processing of your data violates data protection law, you can also file a complaint with the relevant data protection authority.</p>
+
+                    <p><em>Last Updated: 12. August 2025</em></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Notification System -->

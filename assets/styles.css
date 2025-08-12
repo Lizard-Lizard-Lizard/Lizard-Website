@@ -124,10 +124,7 @@ body {
     height: 4rem;
     animation: bounce 2s infinite;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-    border-radius: 50%;
     object-fit: cover;
-    mask: radial-gradient(circle, black 50%, transparent 50%);
-    -webkit-mask: radial-gradient(circle, black 50%, transparent 50%);
 }
 
 .tagline {
@@ -918,6 +915,158 @@ body {
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: modalSlideIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #374151;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #374151;
+}
+
+.modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.imprint-info h4 {
+    color: #374151;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.imprint-info p {
+    color: #4b5563;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.imprint-info a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.imprint-info a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Privacy Modal Styles */
+.privacy-info h4 {
+    color: #374151;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+}
+
+.privacy-info h4:first-child {
+    margin-top: 0;
+}
+
+.privacy-info h5 {
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+}
+
+.privacy-info p {
+    color: #4b5563;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.privacy-info ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.privacy-info li {
+    color: #4b5563;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.privacy-info a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-info a:hover {
+    color: #764ba2;
+    text-decoration: underline;
 }
 
 .footer-content {

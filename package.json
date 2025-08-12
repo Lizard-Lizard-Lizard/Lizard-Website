@@ -31,9 +31,9 @@
     "javascript-game",
     "free-game"
   ],
-  "author": "Lizard Game Studio",
+  "author": "Dennis Heinrich",
   "license": "MIT",
-  "homepage": "https://lizardlizardlizard.com",
+  "homepage": "https://lizards.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/lizardgamestudio/lizard-lizard-lizard.git"

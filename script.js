@@ -6,8 +6,6 @@ const discordBtn = document.getElementById('discordBtn');
 const discordCard = document.querySelector('.discord-community');
 const steamCard = document.querySelector('.steam-release');
 
-
-
 // Initialize page
 function initPage() {
     setupEventListeners();

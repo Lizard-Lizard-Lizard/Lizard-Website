@@ -5,6 +5,12 @@ const wishlistBtn = document.getElementById('wishlistBtn');
 const discordBtn = document.getElementById('discordBtn');
 const discordCard = document.querySelector('.discord-community');
 const steamCard = document.querySelector('.steam-release');
+const imprintBtn = document.getElementById('imprintBtn');
+const imprintModal = document.getElementById('imprintModal');
+const closeImprintModal = document.getElementById('closeImprintModal');
+const privacyBtn = document.getElementById('privacyBtn');
+const privacyModal = document.getElementById('privacyModal');
+const closePrivacyModal = document.getElementById('closePrivacyModal');
 
 
 
@@ -43,6 +49,41 @@ function setupEventListeners() {
         steamCard.addEventListener('click', handleSteamClick);
     }
     
+    // Imprint modal
+    if (imprintBtn) {
+        imprintBtn.addEventListener('click', handleImprintClick);
+    }
+    
+    if (closeImprintModal) {
+        closeImprintModal.addEventListener('click', () => closeModal(imprintModal));
+    }
+    
+    // Privacy modal
+    if (privacyBtn) {
+        privacyBtn.addEventListener('click', handlePrivacyClick);
+    }
+    
+    if (closePrivacyModal) {
+        closePrivacyModal.addEventListener('click', () => closeModal(privacyModal));
+    }
+    
+    // Close modals when clicking outside
+    if (imprintModal) {
+        imprintModal.addEventListener('click', (e) => {
+            if (e.target === imprintModal) {
+                closeModal(imprintModal);
+            }
+        });
+    }
+    
+    if (privacyModal) {
+        privacyModal.addEventListener('click', (e) => {
+            if (e.target === privacyModal) {
+                closeModal(privacyModal);
+            }
+        });
+    }
+    
 
 }
 
@@ -71,6 +112,26 @@ function handleDiscordClick() {
 // Handle steam card click
 function handleSteamClick() {
     showNotification('Steam page coming soon! Wishlist will be available soon! 🎮');
+}
+
+// Handle imprint button click
+function handleImprintClick(e) {
+    e.preventDefault();
+    imprintModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Handle privacy button click
+function handlePrivacyClick(e) {
+    e.preventDefault();
+    privacyModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
 // Start lizard animation
